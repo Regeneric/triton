@@ -2,10 +2,16 @@
     .main-baner {
         padding: 10em 5em;
         place-items: start;
+        background-attachment: fixed;
     }
 
     .main-baner h2 {
         width: 50%;
+    }
+
+    .cards {
+        margin: 2em 0;
+        padding: 3em 1em;
     }
 
     .row {
@@ -45,18 +51,17 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    } 
-    nav ul {display: flex;}
-    nav li {
+    } nav ul {
+        display: flex; margin: 0;
+    } nav li {
         margin-left: 3em;
         margin-bottom: 0;
-    } 
-    nav a {
+    } nav a {
         opacity: 1;
         position: relative;
     } nav a::before {
         content: '';
-        background-color: black;
+        background-color: var(--clr-accent);
 
         display: block;
         position: absolute;
@@ -71,6 +76,58 @@
     } nav a:hover::before {transform: scale(1, 1);}
 
     .cards {
-        gap: 7em;
+        gap: 5em;
+    }
+
+
+    .swiper {
+        display: none;
+    }
+    .team-slider {
+        display: flex;
+    } .team-card {
+        flex-basis: calc(1200px - 100%);
+        flex-grow: 0.205;
+    }
+
+    .triton-team {
+        gap: 3em;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .triton-card {
+        flex-basis: calc(1200px - 100%);
+        flex-grow: 0.205;
+    }
+
+    footer .mini-menu {
+        display: inline;
+    } footer .mini-menu a {
+        opacity: 1;
+        position: relative;
+    } footer .mini-menu a::before {
+        content: '';
+        background-color: var(--clr-accent);
+
+        display: block;
+        position: absolute;
+        top: 1.25em;
+        left: 0;
+        right: 0;
+        height: 3px;
+
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform ease-in-out 250ms;
+    } footer .mini-menu a:hover::before {transform: scale(1, 1);}
+    footer .footer-right {
+        width: 33%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 5em;
+    } footer .input-group {
+        display: flex;
+        flex-direction: row;
     }
 }
