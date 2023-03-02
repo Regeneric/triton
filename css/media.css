@@ -3,7 +3,7 @@
         padding: 10em 5em;
         place-items: start;
         background-attachment: fixed;
-    }
+        } .main-baner video {display: block;}
 
     .main-baner h2 {
         width: 50%;
