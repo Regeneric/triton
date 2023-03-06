@@ -46,6 +46,30 @@ article {
     max-width: 65ch;
 } article > p:first-child {margin-top: 0;}
 
+article .achievements {
+    padding: 0;
+    margin: 1rem;
+
+    width: 100%;
+    max-width: 65ch;
+
+    list-style: none;
+} article .achievements li::before {
+    display: inline-block;
+    
+    content: "\2022";
+    color: var(--clr-accent);
+    font-weight: bold;
+    
+    width: 1em;
+    margin-left: -1em;
+} article .achievements li {
+    padding: 0;
+    margin: 0 1rem;
+
+    text-align: justify;
+}
+
 img {width: 100%;}
 
 
@@ -69,6 +93,11 @@ header {
 .logo {
     font-family: var(--ff-logo);
     margin: 0.2em 0;
+} .logo-img {
+    width: 7rem;
+
+    padding: 0;
+    margin: 0.5rem 7rem;
 }
 
 nav {
@@ -165,7 +194,7 @@ nav {
 
     display: grid;
 
-    background: rgba(0, 0, 0, 0.2) url('../img/baner.jpg');
+    background: rgba(0, 0, 0, 0.3) url('../img/baner.jpg');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -174,7 +203,8 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-}
+} #quote {font-style: italic; font-weight: 600;}
+
 
 .main-baner h2, h3, p {z-index: 10;} 
 .main-baner h2 {
@@ -255,7 +285,7 @@ nav {
     font-style: bold;
     color: white;
 
-    /* border-radius: 100%; */
+    border-radius: 10%;
 } .fa:hover {opacity: 0.7;}
 
 .fa-facebook {background: #3B5998;} 
@@ -367,10 +397,12 @@ nav {
     
     padding: 2rem 0;
 } .triton-card {
-    width: 90%;
+    /* width: 90%; */
     display: flex;
     flex-direction: column;
     justify-content: end;
+
+    background-color: whitesmoke;
 
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
@@ -378,7 +410,7 @@ nav {
     box-shadow: var(--clr-bg-darker);
 } .triton-card img {
     width: 360px;
-    height: 540px;
+    /* height: 540px; */
     
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
@@ -454,7 +486,7 @@ a {
     align-items: center;
     justify-content: center;
 
-    background-image: url('../img/team-bg.png');
+    background-image: url('../img/tlo3.png');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -468,7 +500,7 @@ a {
     height: 18.5rem;
 
 } .team-card .top img {
-    width: 200px;
+    width: 270px;
 } .team-card .bottom {
     padding: 0 2rem 4rem 2rem;
 
@@ -481,7 +513,13 @@ a {
     font-size: clamp(1rem, 8vw, 2.25rem); 
     /* margin: 0; */
     text-align: left;
-}
+} .team-card .bottom p {min-height: 20rem; overflow: hidden; text-overflow: clip;}
+.team-card .bottom .rd-more {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+} .team-card .bottom .rd-more a {color: var(--clr-accent); font-weight: 600;}
+.team-card .bottom .rd-more a:hover{color: var(--clr-accent-modest);}
 
 
 .snd-btn {
